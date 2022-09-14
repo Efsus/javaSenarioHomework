@@ -5,9 +5,9 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package MernisReferenceService;
+package javaSenarioHomework.MernisReferenceService;
 
-public class KPSPublicLocator extends org.apache.axis.client.Service implements MernisReferenceService.KPSPublic {
+public class KPSPublicLocator extends org.apache.axis.client.Service implements javaSenarioHomework.MernisReferenceService.KPSPublic {
 
     public KPSPublicLocator() {
     }
@@ -39,7 +39,7 @@ public class KPSPublicLocator extends org.apache.axis.client.Service implements 
         KPSPublicSoapWSDDServiceName = name;
     }
 
-    public MernisReferenceService.KPSPublicSoap getKPSPublicSoap() throws javax.xml.rpc.ServiceException {
+    public javaSenarioHomework.MernisReferenceService.KPSPublicSoap getKPSPublicSoap() throws javax.xml.rpc.ServiceException {
        java.net.URL endpoint;
         try {
             endpoint = new java.net.URL(KPSPublicSoap_address);
@@ -50,9 +50,9 @@ public class KPSPublicLocator extends org.apache.axis.client.Service implements 
         return getKPSPublicSoap(endpoint);
     }
 
-    public MernisReferenceService.KPSPublicSoap getKPSPublicSoap(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
+    public javaSenarioHomework.MernisReferenceService.KPSPublicSoap getKPSPublicSoap(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
         try {
-            MernisReferenceService.KPSPublicSoapStub _stub = new MernisReferenceService.KPSPublicSoapStub(portAddress, this);
+            javaSenarioHomework.MernisReferenceService.KPSPublicSoapStub _stub = new javaSenarioHomework.MernisReferenceService.KPSPublicSoapStub(portAddress, this);
             _stub.setPortName(getKPSPublicSoapWSDDServiceName());
             return _stub;
         }
@@ -72,8 +72,8 @@ public class KPSPublicLocator extends org.apache.axis.client.Service implements 
      */
     public java.rmi.Remote getPort(Class serviceEndpointInterface) throws javax.xml.rpc.ServiceException {
         try {
-            if (MernisReferenceService.KPSPublicSoap.class.isAssignableFrom(serviceEndpointInterface)) {
-                MernisReferenceService.KPSPublicSoapStub _stub = new MernisReferenceService.KPSPublicSoapStub(new java.net.URL(KPSPublicSoap_address), this);
+            if (javaSenarioHomework.MernisReferenceService.KPSPublicSoap.class.isAssignableFrom(serviceEndpointInterface)) {
+                javaSenarioHomework.MernisReferenceService.KPSPublicSoapStub _stub = new javaSenarioHomework.MernisReferenceService.KPSPublicSoapStub(new java.net.URL(KPSPublicSoap_address), this);
                 _stub.setPortName(getKPSPublicSoapWSDDServiceName());
                 return _stub;
             }

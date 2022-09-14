@@ -2,7 +2,7 @@ package javaSenarioHomework.Adapters;
 
 import javaSenarioHomework.Abstract.ICustomerCheckService;
 import javaSenarioHomework.Entities.Customer;
-import MernisReferenceService.*;
+import javaSenarioHomework.MernisReferenceService.*;
 
 public class MernisServiceAdapter implements ICustomerCheckService{
 

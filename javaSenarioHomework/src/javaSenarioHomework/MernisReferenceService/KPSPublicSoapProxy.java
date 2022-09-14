@@ -1,8 +1,8 @@
-package MernisReferenceService;
+package javaSenarioHomework.MernisReferenceService;
 
-public class KPSPublicSoapProxy implements MernisReferenceService.KPSPublicSoap {
+public class KPSPublicSoapProxy implements javaSenarioHomework.MernisReferenceService.KPSPublicSoap {
   private String _endpoint = null;
-  private MernisReferenceService.KPSPublicSoap kPSPublicSoap = null;
+  private javaSenarioHomework.MernisReferenceService.KPSPublicSoap kPSPublicSoap = null;
   
   public KPSPublicSoapProxy() {
     _initKPSPublicSoapProxy();
@@ -15,7 +15,7 @@ public class KPSPublicSoapProxy implements MernisReferenceService.KPSPublicSoap 
   
   private void _initKPSPublicSoapProxy() {
     try {
-      kPSPublicSoap = (new MernisReferenceService.KPSPublicLocator()).getKPSPublicSoap();
+      kPSPublicSoap = (new javaSenarioHomework.MernisReferenceService.KPSPublicLocator()).getKPSPublicSoap();
       if (kPSPublicSoap != null) {
         if (_endpoint != null)
           ((javax.xml.rpc.Stub)kPSPublicSoap)._setProperty("javax.xml.rpc.service.endpoint.address", _endpoint);
@@ -38,7 +38,7 @@ public class KPSPublicSoapProxy implements MernisReferenceService.KPSPublicSoap 
     
   }
   
-  public MernisReferenceService.KPSPublicSoap getKPSPublicSoap() {
+  public javaSenarioHomework.MernisReferenceService.KPSPublicSoap getKPSPublicSoap() {
     if (kPSPublicSoap == null)
       _initKPSPublicSoapProxy();
     return kPSPublicSoap;
